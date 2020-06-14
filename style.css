@@ -1,0 +1,657 @@
+﻿/* Version: 05.03.2018 */
+
+
+ /* ------------------- NICHT VERÄNDERN ------------------------- */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ /* ----------------------------------------------------------- */
+
+body {
+  font-family: 'Roboto', sans-serif;
+/* ------------------- NICHT VERÄNDERN ------------------------- */
+  font-size: 100%;
+ /* ------------------------------------------------------------ */
+  color: #000;
+  text-decoration: none;
+  font-weight: normal;
+  word-spacing: normal;
+  line-height: 1.5;
+  background-color: #f1f1f1;
+  /*	Hintergrundbilder werden in Chrome mit ausgedruckt	*/
+  -webkit-print-color-adjust:exact;
+/* 	background-color:#e5eff5;*/
+}
+
+p {
+  margin: 0;
+}
+
+small{
+	font-size: 0.5em;
+}
+
+.abstand-bottom{
+  margin-bottom: 0.4rem;
+}
+
+h1 {
+  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.frame-outer {
+  position: relative;
+  padding: 1.3rem 4%;
+  width: 100%;
+  margin: 0;
+  background-color: #FFF;
+/*  border: 0.02rem solid #A7A9A4;
+  box-shadow: -0.1rem 0.1rem 1rem #999;*/
+  font-size: 0.8rem;
+}
+
+.frame-outer::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.greater{
+	font-size: 1.2em;
+	line-height: 1.45em;
+}
+
+.logo {
+text-align: right;
+}
+
+.logo img{
+	 width: 10rem;
+}
+
+#search-input{
+  width: 50%;
+  line-height: 1.7;
+  font-size: 1rem;
+  padding: 0.3rem 1.1rem;
+  margin: 1rem 25%;
+  border: solid 1px #000;
+  border-radius: 0.2rem;
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+top: 20px;
+}
+
+hr {
+border:none;
+border-bottom: 1px #000 dashed;
+margin: 2rem 0;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gruen{
+color: #33AA33;
+}
+
+.headline{
+font-size: 1.1em;
+font-weight: bold;
+margin: 0.4rem 0;
+}
+
+.title-block {
+  position: absolute;
+  bottom: 3%;
+  right: 0;
+  padding: 0.5rem 3%;
+  /* --------------------- FALLBACK FÜR BROWSER DIE RGBA-WERTE NICHT UNTERSTÜTZEN -------------------- */
+  background: rgb(0, 0, 0);
+  /* ------------------------------------------------------------------------------------------------- */
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+} 
+
+.content {
+  padding: 1.1rem 3%;
+}
+
+.content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.box-left {
+  float: left;
+  width: 48%;
+}
+
+.box-right {
+  float: right;
+  width: 48%;
+}
+
+.footer {
+  padding: 1.1rem 7%;
+  background-color: #444;
+  color: #eee;
+}
+
+.footer::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  border: 0;
+  vertical-align: middle;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+p.a {
+  white-space: nowrap;
+}
+
+ul {
+  margin: 0 auto 0rem 0.5rem;
+  padding-left: 0.5rem;
+   list-style-image: url(bp.jpg);
+  /* ------------- FALLS ETWAS ANDERES ALS DIE STANDARD AUFZÄHLUNGSZEICHEN GEWÜNSCHT ----------------  */
+  /* list-style-type: none; */
+  /* DANN MUSS "list-style-type: disc;" GELÖSCHT WERDEN.
+  /* ------------------------------------------------------------------------------------------------- */
+}
+
+li {
+  /* ------------- FALLS ETWAS ANDERES ALS DIE STANDARD AUFZÄHLUNGSZEICHEN GEWÜNSCHT ----------------  */
+  /* position: relative; */
+  /* ------------------------------------------------------------------------------------------------- */
+  margin: auto;
+  padding: 0;
+}
+
+/* --------------- FALLS ETWAS ANDERES ALS DIE STANDARD AUFZÄHLUNGSZEICHEN GEWÜNSCHT ----------------  */
+
+/* 
+li::before {
+  position: absolute;
+  top: 0;
+  left: -0.8rem;
+  content: "■";
+  font-size: 0.8rem;
+  color: red;
+} 
+*/
+
+
+.clear {
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.cc{
+column-count: 2;
+column-gap: 1.5rem;
+}
+
+.refnr {}
+
+.justifier {
+  text-align: justify;
+}
+
+.justifier:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.bg-darkblue {
+  background: rgb(78, 147, 250);
+}
+
+.bg-lightblue {
+  background: rgb(127, 174, 245);
+}
+
+/* -------------- FLEXBOX EIGENSCHAFTEN -------------------- */
+/* -----GENERELL: FLEXBOX STATT FLOAT NEHMEN, DA SIE BESSERE OPTIONEN ZUR GESTALTUNG BIETEN, 
+JEDOCH DARAUF ACHTEN, DASS FLEXBOXEN NICHT VOM INTERNET EXPLORER 9 UND ABWÄRTS UNTERSTÜTZT WERDEN. => IN DEM FALL FLOATEN --------------------- */
+
+/* .flex {
+  display: table;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+} 
+*/
+
+/* -------------- FLEXBOX EIGENSCHAFTEN FÜR GLEICHE HOHE BOXEN MIT "PLATZ ZWISCHEN DEN BOXEN" (siehe "justify-content: space-between;") -------------------- */
+
+.flex {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-justify-content: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.flex div{
+  width: 15rem;
+  padding: 1rem;
+  border: solid 1px #000;
+  border-radius: 0.2rem;
+  background-color: #ddd;
+  color: #000;
+  margin: 0.5rem;
+  max-height: 16rem;
+  overflow: hidden;
+}
+
+.flex div:hover{
+  transition: 0.3s;
+  background-color: #eee;
+}
+
+.left {
+  width: 48%;
+  padding: 1rem 3%;
+}
+
+.right {
+  width: 48%;
+  padding: 1rem 3%;
+}
+
+.button_box {
+  text-align: center;
+}
+
+.button_box::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/*____________________
+    
+TRANSITION FÜR VERSCHIEDENE BROWSER
+
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+_______________________
+*/
+
+/*_______________________
+
+BUTTON MIT ANIMATION
+_______________________
+*/
+
+.button a {
+  display: inline-block;
+  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+  margin: 1rem auto;
+  cursor: pointer;
+	font-size: 1.1em;
+ background-color: #9d200a;
+border: 1px solid #9d200a;
+  transition: all 140ms ease 0s;
+  -moz-transition: all 140ms ease 0s;
+  -webkit-transition: all 140ms ease 0s;
+  color: #fff;
+border-radius: 3px;
+}
+.button a:hover {
+  background-position: 15px center;
+  background-color: #8a1c09;
+text-decoration: none;
+}
+
+/*Slider*/
+
+.slider-wrap {
+	max-width:720px;
+  	width: auto;
+  	height: auto;
+	position:relative;
+	overflow: hidden;
+}
+
+/* BEGINN Slider mit 3 Bildern mit transform Animation */
+
+.slideshow-3-bilder {
+	position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+
+}
+.slideshow-3-bilder li span {
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: image-3-bilder 36s linear infinite;
+  animation: image-3-bilder 36s linear infinite;
+}
+
+@keyframes image-3-bilder {
+  0% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  
+  1% {
+    transform: translateX(0);
+  }
+  
+  33.33333% {
+    transform: translateX(0);
+	
+  }
+  
+  34.33333% {
+    transform: translateX(-100%);
+
+  }
+	100%{
+		transform: translateX(-100%);
+	 opacity: 1;
+	}
+
+}
+
+@-webkit-keyframes image-3-bilder {
+0% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  
+  1% {
+    transform: translateX(0);
+  }
+  
+  33.33333% {
+    transform: translateX(0);
+	
+  }
+  
+  34.33333% {
+    transform: translateX(-100%);
+
+  }
+	100%{
+		transform: translateX(-100%);
+	 opacity: 1;
+	}
+
+}
+
+.slideshow-3-bilder li {
+    margin:0;
+    padding:0;
+  list-style: none;
+}
+
+.slideshow-3-bilder li:nth-child(1) span {
+}
+
+.slideshow-3-bilder li:nth-child(2) span {
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.slideshow-3-bilder li:nth-child(3) span {
+  -webkit-animation-delay: 24s;
+  animation-delay: 24s;
+}
+
+ul.slideshow-3-bilder {
+    margin:0;
+}
+
+
+.slider-wrap li::before{
+                display:none;
+}
+
+.slider-wrap ul {
+                margin:0;
+                padding-left:0px;
+                list-style-type: none;
+                list-style:none;
+			    border-bottom:none;
+	            border-color: #fff;
+                border-width: 0px;
+				padding-bottom:5px;
+}
+
+/* ENDE Slider mit 3 Bildern mit transform Animation */
+
+
+/* BEGINN Slider mit 4 Bildern mit transform Animation */
+
+.slideshow-4-bilder {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+.slideshow-4-bilder li span {
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: image-4-bilder 24s linear infinite;
+  animation: image-4-bilder 24s linear infinite;
+}
+
+@keyframes image-4-bilder {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  1% {
+opacity: 1;
+    transform: translateX(0);
+  }
+  
+  25% {
+    transform: translateX(0);
+	
+  }
+  
+  26% {
+    transform: translateX(-100%);
+opacity: 1;
+  }
+	100%{
+		transform: translateX(-100%);
+	opacity: 0;
+	}
+}
+
+@-webkit-keyframes image-4-bilder {
+  0% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  
+  1% {
+    transform: translateX(0);
+  }
+  
+  24% {
+    transform: translateX(0);
+	
+  }
+  
+  25% {
+    transform: translateX(-100%);
+
+  }
+	100%{
+		transform: translateX(-100%);
+	opacity: 1;
+	}
+}
+
+.slideshow-4-bilder li {
+    margin:0;
+    padding:0;
+  list-style: none;
+}
+
+.slideshow-4-bilder li:nth-child(1) span {
+}
+
+.slideshow-4-bilder li:nth-child(2) span {
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.slideshow-4-bilder li:nth-child(3) span {
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.slideshow-4-bilder li:nth-child(4) span {
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s;
+}
+
+ul.slideshow-4-bilder {
+    margin:0;
+}
+
+.slider-wrap li::before{
+                display:none;
+}
+
+.slider-wrap ul {
+                margin:0;
+                padding-left:0px;
+                list-style-type: none;
+                list-style:none;
+		border-bottom:none;
+	        border-color: #fff;
+                border-width: 0px;
+		padding-bottom:5px;
+}
+
+/* ENDE Slider mit 4 Bildern mit transform Animation */
+
+
+/* SLIDER ENDE */
+
+
+/*
+_______________________
+
+MARKIERTER TEXT
+_______________________
+
+::selection {
+background: #ffb7b7;
+}
+::-moz-selection {
+background: #ffb7b7;
+}
+
+*/
