@@ -1,0 +1,9 @@
+- Welche Möglichkeiten gibt es Javascript zu laden oder abzurufen?
+	- Laden-Funktion erstellen
+- Funktion schreiben:
+	- Input-Feld erstellen
+	- dateiname.js erweitern
+		- Durchsuchen-Funktion
+		- 
+	- Meine Bücherliste nach meiner Eingabe durchsuchen
+	- Titel durchsuchen
