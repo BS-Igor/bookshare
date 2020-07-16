@@ -32,6 +32,9 @@
         </div>
       </div>
     </div>
+    <p id="json">
+
+    </p>
 
   </div>
   <div class="footer">
@@ -47,4 +50,24 @@
   
 </body>
 <script src="dateiname.js"></script>
+<script>
+  var xmlhttp = new XMLHttpRequest();
+  var url = "https://34.89.248.202/api/bobgag";
+
+  xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      var bla = xmlhttp.responseText;
+      var json = JSON.parse(bla);
+      console.log(bla);
+      document.getElementById("json").innerHTML = json.data[0].name;
+    }
+    if(xmlhttp.status == 404){
+      alert("Inhalt nicht erreichbar");
+    }
+  };
+  
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+
+</script>
 </html>
