@@ -3,7 +3,7 @@
 
  /* ------------------- NICHT VERÄNDERN ------------------------- */
 /**
- * 1. Correct the line height in all browsers.
+ * 1. Correct the line height in all browsers.  
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
@@ -49,11 +49,11 @@ small{
 }
 
 h1 {
-  line-height: 1.5;
-  font-size: 2rem;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
+	line-height: 1.2;
+	font-size: 1.7rem;
+	font-weight: normal;
+	padding: 0 0 0.5rem 0;
+	margin: 0;
 }
 
 h2 {
@@ -299,14 +299,14 @@ JEDOCH DARAUF ACHTEN, DASS FLEXBOXEN NICHT VOM INTERNET EXPLORER 9 UND ABWÄRTS 
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
-  -webkit-justify-content: start;
-  justify-content: start;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin: 0;
 }
 
 .flex div{
-  width: 15rem;
+  width: 25rem;
   padding: 1rem;
   border: solid 1px #000;
   border-radius: 0.2rem;
@@ -315,7 +315,6 @@ JEDOCH DARAUF ACHTEN, DASS FLEXBOXEN NICHT VOM INTERNET EXPLORER 9 UND ABWÄRTS 
   margin: 0.5rem;
   max-height: 16rem;
   overflow: hidden;
-  
 }
 
 .flex div:hover{
@@ -662,3 +661,12 @@ background: #ffb7b7;
 }
 
 */
+
+@media only all and (max-width: 910px){
+
+  .flex div{
+    width: 100%;
+   
+  }
+
+}
