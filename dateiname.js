@@ -8,10 +8,9 @@ function requestXmlHttp() {
   //old request url "https://ghibliapi.herokuapp.com/films"
   var url = "https://google-books.p.rapidapi.com/volumes?key=AIzaSyAOsteuaW5ifVvA_RkLXh0mYs6GLAD6ykc";
   // Open a new connection, using the GET request on the URL endpoint
-  xmlHttp.open("GET", url, true);
+  xmlHttp.open("GET", url, true); //true means it is async
   xmlHttp.setRequestHeader("x-rapidapi-host", "google-books.p.rapidapi.com");
   xmlHttp.setRequestHeader("x-rapidapi-key", "ae58d1f56bmsh83041b9a62d3035p1d8036jsnabd25f728591");
-  console.log(xmlHttp);
 
   xmlHttp.onload = function () {
     if (xmlHttp.status >= 200 && xmlHttp.status < 400) {
@@ -26,9 +25,9 @@ function requestXmlHttp() {
     }
   }
 
-  // xmlHttp.onprogress = function(){
-  //   document.getElementById('flex-cards').innerHTML = "<p>Please wait.</p>";
-  // }
+  xmlHttp.onloadstart = function(){
+    document.getElementById('flex-cards').innerHTML = '<div class="loader"><div></div></div>';
+  }
 
   xmlHttp.send();
 }
@@ -65,6 +64,7 @@ function generateCards(cards) {
       const content = document.getElementById('flex-cards');
       // Create a div with a card class
       const container = document.createElement('div');
+      container.className = "card";
       content.appendChild(container);
 
       // Create an h1 and set the text content to the film's title
