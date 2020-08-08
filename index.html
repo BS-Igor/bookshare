@@ -19,13 +19,13 @@
         <a href="#"><img src="logo-dummy.jpg" alt="logo.jpg" /></a>
       </div>
     </div>
-    
     <div class="content">
 
       <div>
         <form>
-          <input type="text" name="search" id="search-input" placeholder="Hier suchen...">
+          <input type="text" name="search" id="search-input" placeholder="Hier suchen..." onkeyup="filterData()">
         </form>
+        <button id="refresh-btn" form="search-input" onclick="requestXmlHttp()">Refresh database</button>
       </div>
       <hr>
 
