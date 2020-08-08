@@ -44,6 +44,41 @@ p {
 padding: 0.35rem;
 }
 
+
+.loader div{
+width: 2rem;
+height: 2rem;
+border: 1px dashed #000;
+border-radius: 50%;
+position: relative;
+padding: auto;
+background-color: rgba(0,0,0,0);
+margin: auto;
+max-height: auto;
+overflow: auto;
+animation: single_rotate 2s linear reverse infinite;
+}
+
+
+.loader div::before {
+	position: absolute;
+	content: "";
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #8a1c09;
+	top: 0;
+	left: 0;
+	transform-origin: 1rem 1rem;
+	animation: single_rotate 250ms linear infinite;
+}
+
+@keyframes single_rotate {
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 small{
 	font-size: 0.5em;
 }
@@ -309,7 +344,7 @@ JEDOCH DARAUF ACHTEN, DASS FLEXBOXEN NICHT VOM INTERNET EXPLORER 9 UND ABWÄRTS 
   margin: 0;
 }
 
-.flex div{
+.flex .card { 
   width: 25rem;
   padding: 1rem;
   border: solid 1px #000;
