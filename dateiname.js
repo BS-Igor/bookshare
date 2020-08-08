@@ -69,13 +69,8 @@ function generateCards(cards) {
 
       // Create an h1 and set the text content to the film's title
       const title = document.createElement('h1');
-      if (typeof (card.volumeInfo.title) !== 'undefined') {
-        title.textContent = card.volumeInfo.title;
-      } else {
-        title.textContent = 'No title available.'
-      }
+      title.textContent = card.volumeInfo.title;
       container.appendChild(title);
-      console.log(card);
       // Create a p and set the text content to the film's description
       const paragraph = document.createElement('p');
       if (typeof (card.volumeInfo.description) !== 'undefined') {
@@ -83,7 +78,8 @@ function generateCards(cards) {
         paragraph.textContent = card.volumeInfo.description;
         paragraph.textContent = `${card.volumeInfo.description}…`; // End with an ellipses ...  
       } else {
-        paragraph.textContent = 'No description available.'
+        card.volumeInfo.description ='No description available.';
+        paragraph.textContent = card.volumeInfo.description;
       }
       container.appendChild(paragraph);
     });
