@@ -1,42 +1,32 @@
 // Create a request variable and assign a new XMLHttpRequest object to it.
-
-
-
-
-window.setTimeout(requestXmlHttp, 20);
+requestXmlHttp();
 var data;
 var isSuccess;
 
-function handleEvent(event) {
-  console.log(event.type);
-  document.getElementById('flex-cards').innerHTML = "<p>Verbindung zum Server verloren. Bitte versuchen Sie es später erneut.</p>";
-isSuccess = false;  
-}
-
-function addListeners(xhr) {
-  xhr.addEventListener('error', handleEvent);
-  xhr.addEventListener('abort', handleEvent);
-}
-
 function requestXmlHttp() {
   var xmlHttp = new XMLHttpRequest();
-  var url = "https://ghiblinpi.herokuapp.com/films";
-  //addListeners(xmlHttp);
+  //old request url "https://ghibliapi.herokuapp.com/films"
+  var url = "https://google-books.p.rapidapi.com/volumes";
   // Open a new connection, using the GET request on the URL endpoint
   xmlHttp.open("GET", url, true);
-  xmlHttp.send();
- // xmlHttp.status;
-
+  xmlHttp.setRequestHeader("x-rapidapi-host", "google-books.p.rapidapi.com");
+  xmlHttp.setRequestHeader("x-rapidapi-key", "ae58d1f56bmsh83041b9a62d3035p1d8036jsnabd25f728591");
+  console.log(xmlHttp);
 if (xmlHttp.status >= 200 && xmlHttp.status < 400) {
     isSuccess = true;
     // Begin accessing JSON data here
-      data = JSON.parse(this.response);
+      data = JSON.parse(xmlHttp.response);
       generateCards(data);
 }  else {
   document.getElementById('flex-cards').innerHTML = "<p>Verbindung zum Server verloren. Bitte versuchen Sie es später erneut.</p>";
   isSuccess = false;
 }
 
+// xmlHttp.onprogress = function(){
+//   document.getElementById('flex-cards').innerHTML = "<p>Please wait.</p>";
+// }
+
+xmlHttp.send();
 }
 
 function filterData() {
@@ -50,9 +40,7 @@ function filterData() {
 function filter() {
   //entweder wie drunter oder so: document.getElementById('search-input').value;
   const input = document.querySelector('input').value;
-
   var dataFiltered = [];
-
   //neues gefilterte Array erstellen  
   data.forEach(element => {
     if (element.title.toLowerCase().includes(input.toLowerCase()) || element.description.toLowerCase().includes(input.toLowerCase())) {
