@@ -32,17 +32,16 @@ function requestXmlHttp() {
   xmlHttp.send();
 }
 
-function filterData() {
+function filterData(input) {
   if (isSuccess) {
-    filter();
+    filter(input);
   } else {
     console.log("isSuccess? " + isSuccess);
   }
 }
 
-function filter() {
+function filter(input) {
   //entweder wie drunter oder so: document.getElementById('search-input').value;
-  const input = document.querySelector('input').value;
   var dataFiltered = [];
   //neues gefilterte Array erstellen  
   data.forEach(element => {
