@@ -1,14 +1,53 @@
-﻿- Welche Möglichkeiten gibt es Javascript zu laden oder abzurufen?
-	- Laden-Funktion erstellen
-- Funktion schreiben:
-	- Input-Feld erstellen
-	- dateiname.js erweitern
-		- Durchsuchen-Funktion
-		- 
-	- Meine Bücherliste nach meiner Eingabe durchsuchen
-	- Titel durchsuchen
+﻿Javascript
 
-16.07.2020
-https-statuscode 
-xmlHttpRequest
-Daten provider (Service)
+CHECK 1. Aufgabe 2 1/2h
+Ladetext (symbol) anzeigen (asynchron) für das Laden von Cards 
+	- "Events" handler von XMLHttpRequest() -> https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Handling_responses
+Error handling bei XMLHttpRequest().onload
+
+Wie lange habe ich tatsächlich gebraucht? ca. 4 1/2h
+	- Lösung war simpel, aber ewig gesucht 
+
+/* Aufgabe 
+Javascript im IE laden.
+*/
+
+CHECK 2. Aufgabe 1h 
+Button erstellen, der Karten aktualisiert, statt F5 zu drücken.
+	- xmlHttp.onload im button ausführen
+
+Wie lange habe ich tatsächlich gebraucht? 1/2 h
+
+CHECK 3. Aufgabe 1/2h 
+Event über html form input aufrufen, statt "filterData()" in dateiname.js 
+	- Um Codezeilen zu sparen
+	- input Value übergeben
+
+Wie lange habe ich tatsächlich gebraucht? 10 Min
+
+4. Aufgabe 4h
+Was sollen die Kern-Features zur Auswahl von Büchern sein?
+Wie sollen die Features im Projekt umgesetzt werden? Und mit Umsetzung anfangen.
+	- onclick() ?
+	- Details ansehbar machen?
+	- popUp oder eigene Seite ?	
+	- ...
+
+1. Kernfeature: Usermanagement. Entweder über Accounts oder anonym mit mind. einer Bin-kein-Bot-Abfrage
+	- Wie erstellt man einen Buchaustausch, der die Leute vor Missbrauch der App schützt?
+2. Kernfeature: 
+3. Kernfeature: Sobald ein interessantes Buch gefunden wurde, klickt man auf die Card
+	- die Card wird vergrößert dargestellt (vllt. als Popup), mit der Möglichkeit das Buch auszuleihen
+4. Kernfeature: Status der Verfügbarkeit mit Ampelsystem
+	- bereits in preview sichtbar
+5. Kernfeature: Button / Filter, um alle ausgeliehenen Bücher auszublenden, damit nur die Grün und Gelben angezeigt werden
+	- Gelb soll bedeuten, dass ein Buch gerade von jemandem angeschaut wird -> es ist in dieser Zeit reserviert
+	- Wann soll der Status aktualisiert werden? am besten live, also ohne dass ein anderer Nutzer auf aktualisieren drücken muss.
+
+1. Nice-to-have feature: highlighting der Suche in den jeweiligen Cards
+
+	
+
+Wie lange habe ich tatsächlich gebraucht? 50 Min. (nur das brainstorming)
+
+Release ist immer noch am 31.12.2020  ;)
