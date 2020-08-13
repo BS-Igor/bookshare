@@ -21,11 +21,11 @@
     </div>
     <div class="content">
 
-      <div>
+      <div id="search-container">
         <form>
           <input type="text" name="search" id="search-input" placeholder="Hier suchen..." onkeyup="filterData(document.getElementById('search-input').value)">
         </form>
-        <button id="refresh-btn" form="search-input" onclick="requestXmlHttp()">Refresh database</button>
+        <div id="refresh-btn" form="search-input" onclick="requestXmlHttp()">&circlearrowleft;</div>
       </div>
       <hr>
 
