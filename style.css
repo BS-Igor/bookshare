@@ -45,6 +45,7 @@ padding: 0.35rem;
 }
 
 
+
 .loader div{
 width: 2rem;
 height: 2rem;
@@ -57,6 +58,7 @@ margin: auto;
 max-height: auto;
 overflow: auto;
 animation: single_rotate 2s linear reverse infinite;
+overflow: hidden;
 }
 
 
@@ -72,6 +74,8 @@ animation: single_rotate 2s linear reverse infinite;
 	transform-origin: 1rem 1rem;
 	animation: single_rotate 250ms linear infinite;
 }
+
+
 
 @keyframes single_rotate {
   100% {
@@ -246,7 +250,7 @@ p.a {
 ul {
   margin: 0 auto 0rem 0.5rem;
   padding-left: 0.5rem;
-   list-style-image: url(bp.jpg);
+   list-style-type: square;
   /* ------------- FALLS ETWAS ANDERES ALS DIE STANDARD AUFZÄHLUNGSZEICHEN GEWÜNSCHT ----------------  */
   /* list-style-type: none; */
   /* DANN MUSS "list-style-type: disc;" GELÖSCHT WERDEN.
@@ -375,7 +379,7 @@ JEDOCH DARAUF ACHTEN, DASS FLEXBOXEN NICHT VOM INTERNET EXPLORER 9 UND ABWÄRTS 
   width: 48%;
   padding: 1rem 3%;
 }
-
+/* 
 .button_box {
   text-align: center;
 }
@@ -384,7 +388,7 @@ JEDOCH DARAUF ACHTEN, DASS FLEXBOXEN NICHT VOM INTERNET EXPLORER 9 UND ABWÄRTS 
   clear: both;
   content: "";
   display: block;
-}
+} */
 
 /*____________________
     
@@ -403,7 +407,7 @@ _______________________
 BUTTON MIT ANIMATION
 _______________________
 */
-
+/* 
 .button a {
   display: inline-block;
   padding: 0.6rem 1.5rem 0.6rem 1.5rem;
@@ -422,20 +426,20 @@ border-radius: 3px;
   background-position: 15px center;
   background-color: #8a1c09;
 text-decoration: none;
-}
+} */
 
 /*Slider*/
-
+/* 
 .slider-wrap {
 	max-width:720px;
   	width: auto;
   	height: auto;
 	position:relative;
 	overflow: hidden;
-}
+} */
 
 /* BEGINN Slider mit 3 Bildern mit transform Animation */
-
+/* 
 .slideshow-3-bilder {
 	position: absolute;
   width: 100%;
@@ -551,13 +555,13 @@ ul.slideshow-3-bilder {
 	            border-color: #fff;
                 border-width: 0px;
 				padding-bottom:5px;
-}
+} */
 
 /* ENDE Slider mit 3 Bildern mit transform Animation */
 
 
 /* BEGINN Slider mit 4 Bildern mit transform Animation */
-
+/* 
 .slideshow-4-bilder {
   position: absolute;
   width: 100%;
@@ -676,7 +680,7 @@ ul.slideshow-4-bilder {
 	        border-color: #fff;
                 border-width: 0px;
 		padding-bottom:5px;
-}
+} */
 
 /* ENDE Slider mit 4 Bildern mit transform Animation */
 
