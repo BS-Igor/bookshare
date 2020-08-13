@@ -40,9 +40,6 @@ p {
   margin: 0;
 }
 
-#refresh-btn{
-padding: 0.35rem;
-}
 
 
 
@@ -135,19 +132,37 @@ text-align: right;
 	 width: 10rem;
 }
 
+#search-container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
 #search-input{
-  width: 50%;
+  width: 30rem;
   line-height: 1.7;
   font-size: 1rem;
   padding: 0.3rem 1.1rem;
-  margin: 1rem 25%;
+  margin: 1rem auto;
   border: solid 1px #000;
   border-radius: 0.2rem;
   text-align: center;
-  position: -webkit-sticky;
-  position: sticky;
-top: 20px;
 }
+
+#refresh-btn{
+  padding: 0.3rem;
+  font-size: 1.76rem;
+  background-color: #ddd;
+  line-height: 1;
+  margin: 0 0.75rem;
+  border: solid 1px #000;
+  border-radius: 0.2rem;
+  }
+  
+  #refresh-btn:hover{
+    cursor: pointer;
+  }
+  
 
 hr {
 border:none;
@@ -708,6 +723,11 @@ background: #ffb7b7;
   .flex div{
     width: 100%;
    
+  }
+
+  .loader div{
+    width: 2rem;
+    height: 2rem;
   }
 
 }
