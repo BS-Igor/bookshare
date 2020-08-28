@@ -6,7 +6,7 @@ var isSuccess;
 function requestXmlHttp() {
   var xmlHttp = new XMLHttpRequest();
   //old request url "https://ghibliapi.herokuapp.com/films"
-  var url = "https://google-books.p.rapidapi.com/volumes?key=AIzaSyAOsteuaW5ifVvA_RkLXh0mYs6GLAD6ykc";
+  var url = "https://google-books.p.rapidapi.com/volumes";
   // Open a new connection, using the GET request on the URL endpoint
   xmlHttp.open("GET", url, true); //true means it is async
   xmlHttp.setRequestHeader("x-rapidapi-host", "google-books.p.rapidapi.com");
@@ -23,6 +23,7 @@ function requestXmlHttp() {
       document.getElementById('flex-cards').innerHTML = "<p>Verbindung zum Server verloren. Bitte versuchen Sie es später erneut.</p>";
       isSuccess = false;
     }
+
   }
 
   xmlHttp.onloadstart = function(){
