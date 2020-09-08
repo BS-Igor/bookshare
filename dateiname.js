@@ -26,7 +26,7 @@ function requestXmlHttp() {
 
   }
 
-  xmlHttp.onloadstart = function(){
+  xmlHttp.onloadstart = function () {
     document.getElementById('flex-cards').innerHTML = '<div class="loader"><div></div></div>';
   }
 
@@ -67,6 +67,36 @@ function generateCards(cards) {
       container.className = "card";
       content.appendChild(container);
 
+      //creates a modal-view by clicking
+      container.onclick = function () {
+        const modalContent = document.createElement('div');
+        modalContent.className = "modal-content"; //replaces all other classes with the single new one
+        // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
+        const modalContainer = document.createElement('div');
+        modalContainer.className = "modal";
+        modalContainer.appendChild(modalContent);
+        content.appendChild(modalContainer);
+        const crossClose = document.createElement('span');
+        crossClose.className = "close";
+        crossClose.textContent = '×';
+        modalContent.appendChild(crossClose);
+        const modalTitle = document.createElement('h1');
+        modalTitle.textContent = card.volumeInfo.title;
+        modalContent.appendChild(modalTitle);
+        const modalParagraph = document.createElement('p');
+        modalParagraph.textContent = card.volumeInfo.description;
+        modalContent.appendChild(modalParagraph);
+        var applyBtn = document.createElement("button");
+        applyBtn.id = "apply";
+        applyBtn.innerHTML = "Select this book";
+        modalContent.appendChild(applyBtn);
+        window.onclick = function (event) {
+          if (event.target == modalContainer || event.target == crossClose) {
+            modalContainer.style.display = "none";
+          }
+        }
+      };
+
       // Create an h1 and set the text content to the film's title
       const title = document.createElement('h1');
       title.textContent = card.volumeInfo.title;
@@ -78,7 +108,7 @@ function generateCards(cards) {
         paragraph.textContent = card.volumeInfo.description;
         paragraph.textContent = `${card.volumeInfo.description}…`; // End with an ellipses ...  
       } else {
-        card.volumeInfo.description ='No description available.';
+        card.volumeInfo.description = 'No description available.';
         paragraph.textContent = card.volumeInfo.description;
       }
       container.appendChild(paragraph);
