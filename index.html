@@ -7,26 +7,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title></title>
   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="responsive.css" type="text/css" media="all and (max-width: 780px)" />
   
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
 </head>
 <body>
   <div class="frame-outer">
-    <div class="header">
-<div class="contact"><a href="#">Kontakt</a></div>
-      <div class="logo">
-        <a href="#"><img src="logo-dummy.jpg" alt="logo.jpg" /></a>
-      </div>
-    </div>
-    <div class="content">
-
+    <div id="bg">      
+      <div id="img-src"><a href='https://de.freepik.com/fotos/hintergrund'>Hintergrund Foto erstellt von creativeart - de.freepik.com</a></div>
       <div id="search-container">
         <form>
           <input type="text" name="search" id="search-input" placeholder="Hier suchen..." onkeyup="filterData(document.getElementById('search-input').value)">
         </form>
         <div id="refresh-btn" form="search-input" onclick="requestXmlHttp()">&circlearrowleft;</div>
       </div>
+    </div>
+    <div class="content">
+
+
       <hr>
 
       <div class="flex" id="flex-cards">
@@ -52,5 +49,5 @@
 
   </div>  
 </body>
-<script src="dateiname.js"></script>
+<script src="app.js"></script>
 </html>
